@@ -4,78 +4,52 @@
   <meta charset="UTF-8">
   <title>title</title>
   <style>
-	ul.heroes {
-		list-style-type: none;
-	}
-		ul.heroes li.hero {
-			float: left;
-		}
-			ul.heroes li.hero img {
-				width: 54px;
-			}
+  ul.heroes {
+    list-style-type: none;
+  }
+    ul.heroes li.hero {
+      float: left;
+    }
+      ul.heroes li.hero img {
+        width: 54px;
+      }
   </style>
  </head>
  <body>
- 
-	
+
+
   <h2>Available Heroes</h2>
   <ul id="available_heroes" class="heroes"></ul>
 
-  
-  
   <h2>Selected Heroes</h2>
   <ul id="selected_heroes" class="heroes"></ul>
- 
+
+  <h2>Advice</h2>
+  <ul id="advice"></ul>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+  <script src="advice.js" type="text/javascript"></script>
   <script src="heroes.js" type="text/javascript"></script>
+  <script src="stats.js" type="text/javascript"></script>
+  <script src="hero_selector.js" type="text/javascript"></script>
   <script type="text/javascript">
-	if (!String.prototype.format) {
-	  String.prototype.format = function() {
-		var args = arguments;
-		return this.replace(/{(\d+)}/g, function(match, number) { 
-		  return typeof args[number] != 'undefined'
-			? args[number]
-			: match
-		  ;
-		});
-	  };
-	}
-	
-	//
-	// Hero Selector
-	//
-	
-	// ... show images
-	for (var i = 0; i < heroes.length; i++) {
-	  url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(heroes[i].slug);
-	  hero_li = $("<li class='hero'><img src='" + url + "' /></li>");
-	  hero_li.data('slug', heroes[i].slug);
-	  $("#available_heroes").append(hero_li);
-	}
-	
-	// ... select heroes
-	$("#available_heroes .hero").on("click", function() {
-		hero = $(this).clone(true);
-		hero.off('click');
-		$("#selected_heroes").append(hero);
-	});
-	
-	// ... remove heroes
-	$(document).on("click", '#selected_heroes .hero', function() {
-		$(this).remove();
-	});
-	
-	// ... Main Interface
-	function get_selected_heroes() {
-		names = [];
-		selected_heroes = $("#selected_heroes li");
-		for (var i = 0; i < selected_heroes.length; i++) {
-			names.push($(selected_heroes[i]).data('slug'));
-		} 
-		return names;
-	}
-	
+   $(document).on('heroes_changed', function () {
+
+    // Get advice
+    selected = get_selected_heroes();
+    team = new Team(selected);
+    advice = new Advisor(team);
+    pieces_of_advices = advice.get_all();
+
+    // Display advice
+    $("#advice").html('');
+    for (var i = 0; i < pieces_of_advices.length; i++) {
+     adv = pieces_of_advices[i];
+     $("#advice").append(adv.display());
+    }
+
+   });
   </script>
-  
+
  </body>
 </html>
