@@ -20,16 +20,24 @@ function Advisor(team) {
 
     this.advice_carries = function () {
         carry_avg = team.stat_avg('Carry')
-        if (carry_avg > 1.2) {
+        if (carry_avg >= 1.2)
             return new Advice('Carries', 'warning', 'You have a lot of carries!');
-        }
-        if (carry_avg > 0.8) {
-            return new Advice('Carries', 'succes', 'You have a good amount of carries.');
-        }
-        if (carry_avg > 0.4) {
+        if (carry_avg >= 0.8)
+            return new Advice('Carries', 'success', 'You have a good amount of carries.');
+        if (carry_avg >= 0.4)
             return new Advice('Carries', 'warning', 'You are weak on carries.');
-        }
         return new Advice('Carries', 'danger', 'You have almost no carry potential.  Finish fast!')
+    }
+
+    this.advice_disables = function () {
+        disables = team.stat_avg('Disabler');
+        if (disables >= 1)
+            return new Advice('Disables', 'success', 'You have a lot of disables.');
+        if (disables >= 0.8)
+            return new Advice('Disables', 'info', 'You have a moderate amount of disables."');
+        if (disables >= 0.4)
+            return new Advice('Disables', 'warning', 'You are weak on disables.');
+        return new Advice('Carries', 'danger', 'You have no disables!');
     }
 
     this.advice_squishiness = function () {
