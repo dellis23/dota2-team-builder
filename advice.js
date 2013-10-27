@@ -1,34 +1,17 @@
 function Advice(name, level, message) {
-    this.levels = {
-        'none': {
-            color: '#cc0000',
-            display: 'Non-existant'
-        },
-        'weak': {
-            color: '#FF894A',
-            display: 'Weak'
-        },
-        'medium': {
-            color: '#FFFF4A',
-            display: 'Medium'
-        },
-        'strong': {
-            color: '#AEFF4A',
-            display: 'Strong'
-        },
-        'amazing': {
-            color: '#4AFF4A',
-            display: 'Amazing'
-        }
-    };
-
     this.name = name;
-    this.level = this.levels[level];
+    /* Boostrap levels:
+        muted
+        success
+        info
+        warning
+        danger
+    */
+    this.level = level;
     this.message = message;
     this.display = function () {
-       return "<li style='color: {0}'>{1} - <strong>{2}</strong>: <em>{3}</em>"
-              .format(adv.level.color, adv.name,
-                      adv.level.display, adv.message)
+       return "<li class='text-{0}'><strong>{1}</strong>: <em>{2}</em></li>"
+              .format(this.level, this.name, this.message)
     }
 }
 
@@ -38,10 +21,12 @@ function Advisor(team) {
     this.advice_squishiness = function () {
         if (team.stat_avg('Escape') < 0.5 && team.stat_avg('Durable') < 0.3) {
             return new Advice('Squishiness',
-                              'medium',
+                              'warning',
                               "Your team may be squishy!");
         }
-        return new Advice('Squishiness', 'strong', "Your team seems durable.");
+        return new Advice('Squishiness',
+                          'success',
+                          "Your team seems durable.");
     }
 
     this.get_all = function () {
