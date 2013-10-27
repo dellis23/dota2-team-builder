@@ -45,10 +45,28 @@ function Advisor(team) {
         if (initiation >= 1.2)
             return new Advice('Initiation', 'success', 'Holy jesus you have a lot of initation!');
         if (initiation >= 0.8)
-            return new Advice('Initiation', 'success', 'You have some solid initiation.')
+            return new Advice('Initiation', 'success', 'You have some solid initiation.');
         if (initiation >= 0.4)
-            return new Advice('Initiation', 'warning', 'Your initiation is a bit weak.')
-        return new Advice('Initiation', 'danger', 'You have almost no initiation!')
+            return new Advice('Initiation', 'warning', 'Your initiation is a bit weak.');
+        return new Advice('Initiation', 'danger', 'You have almost no initiation!');
+    }
+
+    this.advice_nukers = function () {
+        nukers = this.team.stat_sum('Nuker');
+        if (nukers >= 5)
+            return new Advice('Nukers', 'success', "You've got strong nuking potential.");
+        if (nukers >= 3)
+            return new Advice('Nukers', 'info', "You have alright nuking potential.");
+        return new Advice('Nukers', 'warning', "You have almost no nukers!")
+    }
+
+    this.advice_pushers = function () {
+        pushing = this.team.stat_sum('Pusher');
+        if (pushing >= 2)
+            return new Advice('Pushers', 'success', "You've got good tower pushers.")
+        if (pushing >= 1)
+            return new Advice('Pushers', 'info', "Your tower pushing is alright.")
+        return new Advice('Pushers', 'warning', "You have no tower pushers!")
     }
 
     this.advice_squishiness = function () {
