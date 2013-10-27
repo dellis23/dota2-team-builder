@@ -44,4 +44,8 @@ function Team(hero_list) {
 	this.stat_avg = function (stat_name) {
 		return avg(this.stat_rankings(stat_name));
 	}
+
+	this.stat_sum = function (stat_name) {
+		return sum(this.stat_rankings(stat_name));
+	}
 }

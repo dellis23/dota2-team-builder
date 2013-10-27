@@ -37,7 +37,7 @@ function Advisor(team) {
             return new Advice('Disables', 'info', 'You have a moderate amount of disables.');
         if (disables >= 0.4)
             return new Advice('Disables', 'warning', 'You are weak on disables.');
-        return new Advice('Carries', 'danger', 'You have no disables!');
+        return new Advice('Disables', 'danger', 'You have no disables!');
     }
 
     this.advice_initiation = function () {
@@ -52,7 +52,7 @@ function Advisor(team) {
     }
 
     this.advice_squishiness = function () {
-        if (team.stat_avg('Escape') < 0.5 && team.stat_avg('Durable') < 0.3) {
+        if (this.team.stat_avg('Escape') < 0.5 && this.team.stat_avg('Durable') < 0.3) {
             return new Advice('Squishiness',
                               'warning',
                               "Your team may be squishy!");
@@ -71,11 +71,21 @@ function Advisor(team) {
         return new Advice('Supports', 'danger', 'You have no supports!')
     }
 
+    this.advice_junglers = function () {
+        junglers = this.team.stat_sum('Jungler');
+        if (junglers >= 4)
+            return new Advice('Junglers', 'warning', "You've got a lot of junglers there buddy...");
+        return false;
+    }
+
     this.get_all = function () {
         pieces_of_advice = [];
         for (func in this) {
             if (func.indexOf("advice_") == 0) {
-                pieces_of_advice.push(this[func]());
+                adv = this[func]();
+                if (adv) {
+                    pieces_of_advice.push(adv);
+                }
             }
         }
         return pieces_of_advice;
