@@ -18,6 +18,20 @@ function Advice(name, level, message) {
 function Advisor(team) {
     this.team = team;
 
+    this.advice_carries = function () {
+        carry_avg = team.stat_avg('Carry')
+        if (carry_avg > 1.2) {
+            return new Advice('Carries', 'warning', 'You have a lot of carries!');
+        }
+        if (carry_avg > 0.8) {
+            return new Advice('Carries', 'succes', 'You have a good amount of carries.');
+        }
+        if (carry_avg > 0.4) {
+            return new Advice('Carries', 'warning', 'You are weak on carries.');
+        }
+        return new Advice('Carries', 'danger', 'You have almost no carry potential.  Finish fast!')
+    }
+
     this.advice_squishiness = function () {
         if (team.stat_avg('Escape') < 0.5 && team.stat_avg('Durable') < 0.3) {
             return new Advice('Squishiness',
