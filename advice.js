@@ -51,6 +51,15 @@ function Advisor(team) {
                           "Your team seems durable.");
     }
 
+    this.advice_supports = function () {
+        supports = team.stat_avg('Support');
+        if (supports >= 0.6)
+            return new Advice('Supports', 'success', 'You have a good amount of support.')
+        if (supports >= 0.2)
+            return new Advice('Supports', 'warning', 'You are weak on supports.')
+        return new Advice('Supports', 'danger', 'You have no supports!')
+    }
+
     this.get_all = function () {
         pieces_of_advice = [];
         for (func in this) {
