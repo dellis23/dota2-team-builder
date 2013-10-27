@@ -34,10 +34,21 @@ function Advisor(team) {
         if (disables >= 1)
             return new Advice('Disables', 'success', 'You have a lot of disables.');
         if (disables >= 0.8)
-            return new Advice('Disables', 'info', 'You have a moderate amount of disables."');
+            return new Advice('Disables', 'info', 'You have a moderate amount of disables.');
         if (disables >= 0.4)
             return new Advice('Disables', 'warning', 'You are weak on disables.');
         return new Advice('Carries', 'danger', 'You have no disables!');
+    }
+
+    this.advice_initiation = function () {
+        initiation = team.stat_avg('Initiator');
+        if (initiation >= 1.2)
+            return new Advice('Initiation', 'success', 'Holy jesus you have a lot of initation!');
+        if (initiation >= 0.8)
+            return new Advice('Initiation', 'success', 'You have some solid initiation.')
+        if (initiation >= 0.4)
+            return new Advice('Initiation', 'warning', 'Your initiation is a bit weak.')
+        return new Advice('Initiation', 'danger', 'You have almost no initiation!')
     }
 
     this.advice_squishiness = function () {
