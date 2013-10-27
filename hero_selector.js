@@ -24,6 +24,14 @@ for (var i = 0; i < heroes.length; i++) {
 
 // ... select heroes
 $("#available_heroes .hero").on("click", function() {
+  // ... ... no more than 5 max
+  if (get_selected_heroes().length >= 5) { return; }
+
+  // ... ... don't add duplicates
+  hero_name = $(this).data('slug');
+  if (get_selected_heroes().indexOf(hero_name) != -1) { return; }
+
+  //... ... select the character
   hero = $(this).clone(true);
   hero.off('click');
   $("#selected_heroes").append(hero);
