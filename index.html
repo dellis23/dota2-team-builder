@@ -21,47 +21,37 @@
 
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row" style="min-height: 325px;">
 
-			<!-- Left Side -->
-			<div class="col-md-8">
-
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Selected Heroes</h2>
-						<ul class="heroes" id="selected_heroes"></ul>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-12">
-						<h2>Available Heroes</h2>
-						<ul class="heroes" id="available_heroes"></ul>
-					</div>
-				</div>
-
+			<!-- Left column -->
+			<div class="col-md-8" style="min-height: 114px;">
+				<h2>Selected Heroes</h2>
+				<ul class="heroes" id="selected_heroes"></ul>
+				<span class="clearfix"></span>
 			</div>
-			<!-- /left side -->
+			<!-- /left column -->
 
 			<!-- Right column -->
 			<div class="col-md-4">
-				<h2>Advice</h2>
+				<h3>Advice</h2>
 				<ul id="advice"></ul>
-			</div>
-			<!-- /right column -->
-
-		</div>
-		
-		<div class="row">
-		
-			<!-- Filtering -->
-			<div class="col-md-3">
+				
 				<h3>Filter Heroes</h3>
 				<form role="form">
 				    <div class="form-group">
 					<input type="text" id="filter" class="form-control" placeholder="Hero name" />
 			        </div>
 			    </form>
+			</div>
+			<!-- /right column -->
+
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-md-8">
+				<h2>Available Heroes</h2>
+				<ul class="heroes" id="available_heroes"></ul>
 			</div>
 		
 		</div>
