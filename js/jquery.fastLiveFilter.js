@@ -1,8 +1,8 @@
 /**
  * fastLiveFilter jQuery plugin 1.0.3
- * 
+ *
  * Modified to use data binded with a DOTA 2 hero's name.
- * 
+ *
  * Copyright (c) 2011, Anthony Bush
  * License: <http://www.opensource.org/licenses/bsd-license.php>
  * Project Website: http://anthonybush.com/projects/jquery_fast_live_filter/
@@ -15,9 +15,9 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 	var input = this;
 	var timeout = options.timeout || 0;
 	var callback = options.callback || function() {};
-	
+
 	var keyTimeout;
-	
+
 	// NOTE: because we cache lis & len here, users would need to re-init the plugin
 	// if they modify the list in the DOM later.  This doesn't give us that much speed
 	// boost, so perhaps it's not worth putting it here.
@@ -25,7 +25,7 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 	var len = lis.length;
 	var oldDisplay = len > 0 ? lis[0].style.display : "block";
 	callback(len); // do a one-time callback on initialization to make sure everything's in sync
-	
+
 	input.change(function() {
 		// var startTime = new Date().getTime();
 		var filter = input.val().toLowerCase();
@@ -33,9 +33,10 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 		var numShown = 0;
 		for (var i = 0; i < len; i++) {
 			li = lis[i];
-			if ($(li).data('name').toLowerCase().indexOf(filter) >= 0) {
+			if ($(li).attr('data-Name').toLowerCase().indexOf(filter) >= 0) {
 				if (li.style.display == "none") {
-					li.style.display = oldDisplay;
+					//li.style.display = oldDisplay;
+					li.style.display = "block";
 				}
 				numShown++;
 			} else {

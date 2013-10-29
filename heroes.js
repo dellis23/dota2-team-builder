@@ -10,7 +10,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 0,
     "slug": "abaddon"
   },
@@ -25,7 +25,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "alchemist"
   },
@@ -40,7 +40,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "ancient_apparition"
   },
@@ -55,7 +55,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "antimage"
   },
@@ -70,7 +70,7 @@ var heroes = [
     "Jungler": 1,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "axe"
   },
@@ -85,7 +85,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "bane"
   },
@@ -100,7 +100,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "batrider"
   },
@@ -115,7 +115,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "beastmaster"
   },
@@ -130,7 +130,7 @@ var heroes = [
     "Jungler": 1,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "bloodseeker"
   },
@@ -145,7 +145,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "bounty_hunter"
   },
@@ -160,7 +160,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "brewmaster"
   },
@@ -175,7 +175,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "bristleback"
   },
@@ -190,7 +190,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 3,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "broodmother"
   },
@@ -205,7 +205,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "centaur"
   },
@@ -220,7 +220,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "chaos_knight"
   },
@@ -235,7 +235,7 @@ var heroes = [
     "Jungler": 3,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "8",
     "slug": "chen"
   },
@@ -250,7 +250,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "clinkz"
   },
@@ -265,7 +265,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "rattletrap"
   },
@@ -280,7 +280,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 1,
+    "LaneSupport": 1,
     "Total": "8",
     "slug": "crystal_maiden"
   },
@@ -295,7 +295,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "dark_seer"
   },
@@ -310,7 +310,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 3,
+    "LaneSupport": 3,
     "Total": "6",
     "slug": "dazzle"
   },
@@ -325,7 +325,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "death_prophet"
   },
@@ -340,7 +340,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "disruptor"
   },
@@ -355,7 +355,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "doom_bringer"
   },
@@ -370,7 +370,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "dragon_knight"
   },
@@ -385,7 +385,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "drow_ranger"
   },
@@ -400,7 +400,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 1,
+    "LaneSupport": 1,
     "Total": "7",
     "slug": "earthshaker"
   },
@@ -415,7 +415,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "elder_titan"
   },
@@ -430,7 +430,7 @@ var heroes = [
     "Jungler": 1,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "enchantress"
   },
@@ -445,7 +445,7 @@ var heroes = [
     "Jungler": 2,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "8",
     "slug": "enigma"
   },
@@ -460,7 +460,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "faceless_void"
   },
@@ -475,7 +475,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "gyrocopter"
   },
@@ -490,7 +490,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "huskar"
   },
@@ -505,7 +505,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "invoker"
   },
@@ -520,7 +520,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "6",
     "slug": "wisp"
   },
@@ -535,7 +535,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 2,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "7",
     "slug": "jakiro"
   },
@@ -550,7 +550,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "juggernaut"
   },
@@ -565,7 +565,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "6",
     "slug": "keeper_of_the_light"
   },
@@ -580,7 +580,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "kunkka"
   },
@@ -595,7 +595,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 3,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "8",
     "slug": "leshrac"
   },
@@ -610,7 +610,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 3,
+    "LaneSupport": 3,
     "Total": "8",
     "slug": "lich"
   },
@@ -625,7 +625,7 @@ var heroes = [
     "Jungler": 1,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "life_stealer"
   },
@@ -640,7 +640,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "lina"
   },
@@ -655,7 +655,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 0,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "10",
     "slug": "lion"
   },
@@ -670,7 +670,7 @@ var heroes = [
     "Jungler": 1,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "lone_druid"
   },
@@ -685,7 +685,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "luna"
   },
@@ -700,7 +700,7 @@ var heroes = [
     "Jungler": 2,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "lycan"
   },
@@ -715,7 +715,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "magnataur"
   },
@@ -730,7 +730,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "medusa"
   },
@@ -745,7 +745,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "meepo"
   },
@@ -760,7 +760,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "mirana"
   },
@@ -775,7 +775,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "8",
     "slug": "morphling"
   },
@@ -790,7 +790,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "naga_siren"
   },
@@ -805,7 +805,7 @@ var heroes = [
     "Jungler": 2,
     "Nuker": 0,
     "Pusher": 2,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "furion"
   },
@@ -820,7 +820,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "necrolyte"
   },
@@ -835,7 +835,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "night_stalker"
   },
@@ -850,7 +850,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "nyx_assassin"
   },
@@ -865,7 +865,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "ogre_magi"
   },
@@ -880,7 +880,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 1,
+    "LaneSupport": 1,
     "Total": "4",
     "slug": "omniknight"
   },
@@ -895,7 +895,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "obsidian_destroyer"
   },
@@ -910,7 +910,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "phantom_assassin"
   },
@@ -925,7 +925,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "phantom_lancer"
   },
@@ -940,7 +940,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "puck"
   },
@@ -955,7 +955,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "pudge"
   },
@@ -970,7 +970,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "pugna"
   },
@@ -985,7 +985,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "queenofpain"
   },
@@ -1000,7 +1000,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "razor"
   },
@@ -1015,7 +1015,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "riki"
   },
@@ -1030,7 +1030,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "rubick"
   },
@@ -1045,7 +1045,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "sand_king"
   },
@@ -1060,7 +1060,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "shadow_demon"
   },
@@ -1075,7 +1075,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "nevermore"
   },
@@ -1090,7 +1090,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 3,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "8",
     "slug": "shadow_shaman"
   },
@@ -1105,7 +1105,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "silencer"
   },
@@ -1120,7 +1120,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "skeleton_king"
   },
@@ -1135,7 +1135,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "skywrath_mage"
   },
@@ -1150,7 +1150,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "slardar"
   },
@@ -1165,7 +1165,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "slark"
   },
@@ -1180,7 +1180,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "sniper"
   },
@@ -1195,7 +1195,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "spectre"
   },
@@ -1210,7 +1210,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "spirit_breaker"
   },
@@ -1225,7 +1225,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "7",
     "slug": "storm_spirit"
   },
@@ -1240,7 +1240,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "sven"
   },
@@ -1255,7 +1255,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "templar_assassin"
   },
@@ -1270,7 +1270,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "9",
     "slug": "tidehunter"
   },
@@ -1285,7 +1285,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "shredder"
   },
@@ -1300,7 +1300,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "tinker"
   },
@@ -1315,7 +1315,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "6",
     "slug": "tiny"
   },
@@ -1330,7 +1330,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "7",
     "slug": "treant"
   },
@@ -1345,7 +1345,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "troll_warlord"
   },
@@ -1360,7 +1360,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "tusk"
   },
@@ -1375,7 +1375,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "undying"
   },
@@ -1390,7 +1390,7 @@ var heroes = [
     "Jungler": 2,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "ursa"
   },
@@ -1405,7 +1405,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 1,
+    "LaneSupport": 1,
     "Total": "5",
     "slug": "vengefulspirit"
   },
@@ -1420,7 +1420,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 1,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "venomancer"
   },
@@ -1435,7 +1435,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 2,
     "slug": "viper"
   },
@@ -1450,7 +1450,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "visage"
   },
@@ -1465,7 +1465,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 2,
+    "LaneSupport": 2,
     "Total": "7",
     "slug": "warlock"
   },
@@ -1480,7 +1480,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "5",
     "slug": "weaver"
   },
@@ -1495,7 +1495,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 1,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "windrunner"
   },
@@ -1510,7 +1510,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 0,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": 3,
     "slug": "witch_doctor"
   },
@@ -1525,7 +1525,7 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 3,
     "Pusher": 0,
-    "Lane Support": 0,
+    "LaneSupport": 0,
     "Total": "4",
     "slug": "zuus"
   }

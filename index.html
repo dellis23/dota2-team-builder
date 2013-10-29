@@ -17,6 +17,7 @@
 				width: 127px;
 			}
     </style>
+
 </head>
 
 <body>
@@ -35,27 +36,78 @@
 			<div class="col-md-4">
 				<h3>Advice</h2>
 				<ul id="advice"></ul>
-				
+
 				<h3>Filter Heroes</h3>
+				<h4>By Name</h4>
 				<form role="form">
 				    <div class="form-group">
 					<input type="text" id="filter" class="form-control" placeholder="Hero name" />
 			        </div>
 			    </form>
+				<h4>Sort By Role</h4>
+				<div class="btn-group">
+					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					  Role <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li class="sort-filter" data-filter="all" data-sort="data-Name" data-order="desc">
+							<a href="#">All</a>
+						</li>
+						<li class="divider"></li>
+						<li class="sort-filter" data-sort="data-Carry" data-filter="Carry" data-order="asc">
+							<a href="#">Carries</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Disabler" data-filter="Disabler" data-order="asc">
+							<a href="#">Disablers</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Durable" data-filter="Durable" data-order="asc">
+							<a href="#">Durable</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Escape" data-filter="Escape" data-order="asc">
+							<a href="#">Escapers</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Initiator" data-filter="Initiator" data-order="asc">
+							<a href="#">Initiators</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Jungler" data-filter="Jungler" data-order="asc">
+							<a href="#">Jungler</a>
+						</li>
+						<li class="sort-filter" data-sort="data-LaneSupport" data-filter="LaneSupport" data-order="asc">
+							<a href="#">Lane Supports</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Nuker" data-filter="Nuker" data-order="asc">
+							<a href="#">Nukers</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Pusher" data-filter="Pusher" data-order="asc">
+							<a href="#">Pushers</a>
+						</li>
+						<li class="sort-filter" data-sort="data-Support" data-filter="Support" data-order="asc">
+							<a href="#">Supports</a>
+						</li>
+					</ul>
+				</div>
+				<ul>
+
+				</ul>
 			</div>
 			<!-- /right column -->
 
 		</div>
-		
+
 		<div class="row">
-			
+
 			<div class="col-md-8">
 				<h2>Available Heroes</h2>
 				<ul class="heroes" id="available_heroes"></ul>
 			</div>
-		
+
 		</div>
 	</div>
+
+
+
+
+
 
 	<!-- Scripts -->
 	<!-- ... bootstrap -->
@@ -91,6 +143,27 @@
 	<script>
 		$(function() {
 			$('#filter').fastLiveFilter('ul.heroes');
+		});
+	</script>
+	<script src="js/mixitup/jquery.mixitup.min.js"></script>
+	<style>
+		#available_heroes .hero {
+			opacity: 0;
+			display: none;
+		}
+	</style>
+	<script>
+		$(function() {
+			$('#available_heroes').mixitup({targetSelector: '.hero'});
+
+			// Add generic multimix capabilities
+			$('.sort-filter').on('click', function() {
+				$('#available_heroes').mixitup('multimix', {
+					filter: $(this).attr('data-filter'),
+					sort: $(this).attr('data-sort'),
+					order: $(this).attr('data-order'),
+				});
+			});
 		});
 	</script>
 	<!-- /scripts -->
