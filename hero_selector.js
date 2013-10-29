@@ -19,6 +19,7 @@ for (var i = 0; i < heroes.length; i++) {
   url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(heroes[i].slug);
   hero_li = $("<li class='hero'><img src='" + url + "' /></li>");
   hero_li.data('slug', heroes[i].slug);
+  hero_li.data('name', heroes[i].Name);
   $("#available_heroes").append(hero_li);
 }
 

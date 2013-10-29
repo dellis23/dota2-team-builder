@@ -51,6 +51,20 @@
 			<!-- /right column -->
 
 		</div>
+		
+		<div class="row">
+		
+			<!-- Filtering -->
+			<div class="col-md-3">
+				<h3>Filter Heroes</h3>
+				<form role="form">
+				    <div class="form-group">
+					<input type="text" id="filter" class="form-control" placeholder="Hero name" />
+			        </div>
+			    </form>
+			</div>
+		
+		</div>
 	</div>
 
 	<!-- Scripts -->
@@ -81,6 +95,13 @@
 		 $("#advice").append(adv.display());
 		}
 	});
+	</script>
+	<!-- ... filtering -->
+	<script src="js/jquery.fastLiveFilter.js"></script>
+	<script>
+		$(function() {
+			$('#filter').fastLiveFilter('ul.heroes');
+		});
 	</script>
 	<!-- /scripts -->
 </body>
