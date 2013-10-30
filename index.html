@@ -37,14 +37,16 @@
 				<h3>Advice</h2>
 				<ul id="advice"></ul>
 
+					<hr />
+
 				<h3>Filter Heroes</h3>
-				<h4>By Name</h4>
+				<h4><small>By Name</small></h4>
 				<form role="form">
 				    <div class="form-group">
 					<input type="text" id="filter" class="form-control" placeholder="Hero name" />
 			        </div>
 			    </form>
-				<h4>Sort By Role</h4>
+				<h4><small>By Role</small></h4>
 				<div class="btn-group">
 					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
 					  Role <span class="caret"></span>
@@ -86,9 +88,12 @@
 						</li>
 					</ul>
 				</div>
-				<ul>
 
-				</ul>
+					<hr />
+
+				<h3>Hero Stats</h3>
+				<div id="hero_stats"></div>
+
 			</div>
 			<!-- /right column -->
 
@@ -121,6 +126,7 @@
 	<script src="heroes.js" type="text/javascript"></script>
 	<script src="stats.js" type="text/javascript"></script>
 	<script src="hero_selector.js" type="text/javascript"></script>
+	<script src="hero_stats.js" type="text/javascript"></script>
 	<script type="text/javascript">
 	$(document).on('heroes_changed', function () {
 
