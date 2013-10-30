@@ -32,7 +32,7 @@ $(document).on("mouseenter mouseleave", "#available_heroes .hero", function(even
     $("#hero_stats").html(html);
   }
 
-  if (event.type == 'mouseout') {
+  if (event.type == 'mouseleave') {
     $("#hero_stats").html('');
   }
 

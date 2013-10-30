@@ -22,91 +22,108 @@
 
 <body>
 	<div class="container">
-		<div class="row" style="min-height: 325px;">
+		<div class="row">
 
 			<!-- Left column -->
-			<div class="col-md-8" style="min-height: 114px;">
-				<h2>Selected Heroes</h2>
-				<ul class="heroes" id="selected_heroes"></ul>
-				<span class="clearfix"></span>
+			<div class="col-md-8">
+				<div class="row" style="min-height: 134px">
+					<div class="col-md-12">
+						<h2>Selected Heroes</h2>
+						<ul class="heroes" id="selected_heroes"></ul>
+						<span class="clearfix"></span>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Available Heroes</h2>
+						<ul class="heroes" id="available_heroes"></ul>
+					</div>
+				</div>
 			</div>
 			<!-- /left column -->
 
 			<!-- Right column -->
 			<div class="col-md-4">
-				<h3>Advice</h2>
-				<ul id="advice"></ul>
 
-					<hr />
-
-				<h3>Filter Heroes</h3>
-				<h4><small>By Name</small></h4>
-				<form role="form">
-				    <div class="form-group">
-					<input type="text" id="filter" class="form-control" placeholder="Hero name" />
-			        </div>
-			    </form>
-				<h4><small>By Role</small></h4>
-				<div class="btn-group">
-					<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
-					  Role <span class="caret"></span>
-					</button>
-					<ul class="dropdown-menu" role="menu">
-						<li class="sort-filter" data-filter="all" data-sort="data-Name" data-order="desc">
-							<a href="#">All</a>
-						</li>
-						<li class="divider"></li>
-						<li class="sort-filter" data-sort="data-Carry" data-filter="Carry" data-order="asc">
-							<a href="#">Carries</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Disabler" data-filter="Disabler" data-order="asc">
-							<a href="#">Disablers</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Durable" data-filter="Durable" data-order="asc">
-							<a href="#">Durable</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Escape" data-filter="Escape" data-order="asc">
-							<a href="#">Escapers</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Initiator" data-filter="Initiator" data-order="asc">
-							<a href="#">Initiators</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Jungler" data-filter="Jungler" data-order="asc">
-							<a href="#">Jungler</a>
-						</li>
-						<li class="sort-filter" data-sort="data-LaneSupport" data-filter="LaneSupport" data-order="asc">
-							<a href="#">Lane Supports</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Nuker" data-filter="Nuker" data-order="asc">
-							<a href="#">Nukers</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Pusher" data-filter="Pusher" data-order="asc">
-							<a href="#">Pushers</a>
-						</li>
-						<li class="sort-filter" data-sort="data-Support" data-filter="Support" data-order="asc">
-							<a href="#">Supports</a>
-						</li>
-					</ul>
+				<div class="row" style="min-height: 226px;">
+					<div class="col-md-12">
+						<h3>Advice</h2>
+						<ul id="advice"></ul>
+					</div>
 				</div>
 
-					<hr />
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Filter Heroes</h3>
+						<h4><small>By Name</small></h4>
+						<form role="form">
+							<div class="form-group">
+							<input type="text" id="filter" class="form-control" placeholder="Hero name" />
+							</div>
+						</form>
+					</div>
+				</div>
 
-				<h3>Hero Stats</h3>
-				<div id="hero_stats"></div>
+				<div class="row">
+					<div class="col-md-12">
+						<h4><small>By Role</small></h4>
+						<div class="btn-group">
+							<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+							  Role <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" role="menu">
+								<li class="sort-filter" data-filter="all" data-sort="data-Name" data-order="desc">
+									<a href="#">All</a>
+								</li>
+								<li class="divider"></li>
+								<li class="sort-filter" data-sort="data-Carry" data-filter="Carry" data-order="asc">
+									<a href="#">Carries</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Disabler" data-filter="Disabler" data-order="asc">
+									<a href="#">Disablers</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Durable" data-filter="Durable" data-order="asc">
+									<a href="#">Durable</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Escape" data-filter="Escape" data-order="asc">
+									<a href="#">Escapers</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Initiator" data-filter="Initiator" data-order="asc">
+									<a href="#">Initiators</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Jungler" data-filter="Jungler" data-order="asc">
+									<a href="#">Jungler</a>
+								</li>
+								<li class="sort-filter" data-sort="data-LaneSupport" data-filter="LaneSupport" data-order="asc">
+									<a href="#">Lane Supports</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Nuker" data-filter="Nuker" data-order="asc">
+									<a href="#">Nukers</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Pusher" data-filter="Pusher" data-order="asc">
+									<a href="#">Pushers</a>
+								</li>
+								<li class="sort-filter" data-sort="data-Support" data-filter="Support" data-order="asc">
+									<a href="#">Supports</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Hero Stats</h3>
+						<div id="hero_stats"></div>
+					</div>
+				</div>
 
 			</div>
 			<!-- /right column -->
 
 		</div>
 
-		<div class="row">
-
-			<div class="col-md-8">
-				<h2>Available Heroes</h2>
-				<ul class="heroes" id="available_heroes"></ul>
-			</div>
-
-		</div>
 	</div>
 
 
