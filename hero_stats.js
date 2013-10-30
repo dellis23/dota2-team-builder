@@ -1,39 +1,45 @@
-$(document).on("mouseenter mouseleave", "#available_heroes .hero", function(event) {
-
-  exclude_fields = ['Total'];
-
-  if (event.type == 'mouseenter') {
-    team = new Team()
-    stats = team.get_hero_stats($(this).attr('data-slug'));
-
+function get_stat_display(hero_slug) {
+	exclude_fields = ['Total'];
+  
+	team = new Team()
+    stats = team.get_hero_stats(hero_slug);
 
     // ... hero image & name
-    html = "<p class='text-center'>" + $(this).html() + "</p>";
-    html += '<dl class="dl-horizontal">';
-    html += '<dt>Name</dt>';
-    html += '<dd>' + $(this).attr('data-Name') + '</dd>';
+    html = '<ul class="list-unstyled">';
+    html += '<li>Name - ' + stats['Name'] + '</li>';
 
     // ... hero stats
     for (field in stats) {
         if (exclude_fields.indexOf(field) == -1
         && parseInt(stats[field]) > 0) {
-            html += "<dt>" + field + "</dt>";
+            html += "<li>" + field + " - ";
 
             // ... ... star rating
-            html += "<dd>";
             for (var i = 0; i < parseInt(stats[field]); i++) {
                 html += "<span class='.glyphicon .glyphicon-star-empty'>*</span>";
             }
-            html += "</dd>";
+            html += "</li>";
         }
     }
-    html += "</dl>";
+    html += "</ul>";
+    
+    return html;
+}
 
+
+$(function () {
+});
+
+
+$(document).on("mouseenter mouseleave", "#available_heroes .hero", function(event) {
+
+  /*if (event.type == 'mouseenter') {
+    html = get_stat_display($(this).attr('data-slug'));
     $("#hero_stats").html(html);
   }
 
   if (event.type == 'mouseleave') {
     $("#hero_stats").html('');
-  }
+  }*/
 
 });

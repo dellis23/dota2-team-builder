@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
   <title>  Build a Team |  DOTA2 Team Builder v0.1 (beta) </title>
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/tooltipster.css" />
   <link href="/bootstrap/css/bootstrap-slate.min.css" media="screen" rel="stylesheet">
 	<script src=
     "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type=
@@ -123,13 +124,6 @@
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3>Hero Stats</h3>
-				<div id="hero_stats"></div>
-			</div>
-		</div>
-
 	</div>
 	<!-- /right column -->
 
@@ -175,8 +169,28 @@ $(document).on('heroes_changed', function () {
 	}
 </style>
 <script>
+	
+	function regenerate_tooltips() {
+		$('#available_heroes .hero').each(function () {
+			hero_slug = $(this).attr('data-slug');
+			$(this).attr('title', get_stat_display(hero_slug));  // hero_stats.js
+		});
+		$('#available_heroes .hero').tooltipster({
+			position: 'bottom-right',
+			fixedWidth: 184,
+			maxWidth: 184,
+			//animation: 'grow',
+			delay: 0
+		});
+	}
+	
 	$(function() {
-		$('#available_heroes').mixitup({targetSelector: '.hero'});
+		$('#available_heroes').mixitup({
+			targetSelector: '.hero',
+			onMixEnd: function () {
+				regenerate_tooltips();
+			}
+		});
 
 		// Add generic multimix capabilities
 		$('.sort-filter').on('click', function() {
@@ -186,6 +200,14 @@ $(document).on('heroes_changed', function () {
 				order: $(this).attr('data-order'),
 			});
 		});
+	});
+</script>
+
+
+<script type="text/javascript" src="/js/jquery.tooltipster.min.js"></script>
+<script>
+	$(document).ready(function() {
+		regenerate_tooltips();
 	});
 </script>
 <!-- /scripts -->
