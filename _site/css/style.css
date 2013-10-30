@@ -1,0 +1,13 @@
+
+ul.heroes {
+	list-style-type: none;
+}
+	ul.heroes li.hero {
+		float: left;
+	}
+		ul#available_heroes li.hero img {
+			width: 54px;
+		}
+		ul#selected_heroes li.hero {
+			width: 127px;
+		}
