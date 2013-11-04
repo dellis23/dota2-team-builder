@@ -142,7 +142,7 @@ function Advisor(team) {
     this.advice_lane_support = function () {
         lane_support = team.stat_sum('LaneSupport');
         return new GenericAdvice(
-            'Support',
+            'Lane Support',
             [
                 {min: 0, max: 3, level: 'danger'},
                 {min: 4, max: 15, level: 'success'}
