@@ -29,7 +29,7 @@ title: Build a Team
 		<div class="row" style="min-height: 246px;">
 			<div class="col-md-12">
 				<h3>Advice</h2>
-				<ul id="advice"></ul>
+				<div id="advice"></div>
 			</div>
 		</div>
 
@@ -96,9 +96,22 @@ title: Build a Team
 	<!-- /right column -->
 
 </div>
-	
+
 
 <!-- Scripts -->
+<script>
+	if (!String.prototype.format) {
+	  String.prototype.format = function() {
+	  var args = arguments;
+	  return this.replace(/{(\d+)}/g, function(match, number) {
+	    return typeof args[number] != 'undefined'
+	    ? args[number]
+	    : match
+	    ;
+	  });
+	  };
+	}
+</script>
 <!-- ... dota2 -->
 <script src="advice.js" type="text/javascript"></script>
 <script src="heroes.js" type="text/javascript"></script>
@@ -112,14 +125,7 @@ $(document).on('heroes_changed', function () {
 	selected = get_selected_heroes();
 	team = new Team(selected);
 	advice = new Advisor(team);
-	pieces_of_advices = advice.get_all();
-
-	// Display advice
-	$("#advice").html('');
-	for (var i = 0; i < pieces_of_advices.length; i++) {
-	 adv = pieces_of_advices[i];
-	 $("#advice").append(adv.display());
-	}
+	$("#advice").html(advice.display());
 });
 </script>
 <!-- ... filtering -->
@@ -137,7 +143,7 @@ $(document).on('heroes_changed', function () {
 	}
 </style>
 <script>
-	
+
 	function regenerate_tooltips() {
 		$('#available_heroes .hero').each(function () {
 			hero_slug = $(this).attr('data-slug');
@@ -151,7 +157,7 @@ $(document).on('heroes_changed', function () {
 			delay: 0
 		});
 	}
-	
+
 	$(function() {
 		$('#available_heroes').mixitup({
 			targetSelector: '.hero',

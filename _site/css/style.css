@@ -12,3 +12,7 @@ ul.heroes {
 		ul#selected_heroes li.hero {
 			width: 127px;
 		}
+
+#advice .progress {
+	margin-bottom: 7px;
+}
