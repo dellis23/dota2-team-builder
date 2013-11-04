@@ -1,6 +1,6 @@
 function get_stat_display(hero_slug) {
 	exclude_fields = ['Total'];
-  
+
 	team = new Team()
     stats = team.get_hero_stats(hero_slug);
 
@@ -16,13 +16,13 @@ function get_stat_display(hero_slug) {
 
             // ... ... star rating
             for (var i = 0; i < parseInt(stats[field]); i++) {
-                html += "<span class='.glyphicon .glyphicon-star-empty'>*</span>";
+                html += "<img src='/img/star.png' />";
             }
             html += "</li>";
         }
     }
     html += "</ul>";
-    
+
     return html;
 }
 

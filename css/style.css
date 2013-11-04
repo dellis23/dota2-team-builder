@@ -4,6 +4,7 @@ ul.heroes {
 }
 	ul.heroes li.hero {
 		float: left;
+		cursor: pointer;
 	}
 		ul#available_heroes li.hero img {
 			width: 54px;
