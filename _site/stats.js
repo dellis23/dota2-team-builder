@@ -36,6 +36,8 @@ function Team(hero_list) {
 		rankings = [];
 		for (var i = 0; i < this.heroes.length; i++) {
 			stats = this.get_hero_stats(this.heroes[i]);
+			if (!stats[stat_name])
+				stats[stat_name] = 0;
 			rankings.push(stats[stat_name]);
 		}
 		return rankings;

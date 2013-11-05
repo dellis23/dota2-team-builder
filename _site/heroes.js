@@ -12,7 +12,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 1,
     "Total": 11,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -27,7 +28,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 3,
     "Total": 10,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -57,7 +59,8 @@ var heroes = [
     "Escape": 3,
     "Carry": 3,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 3,
@@ -72,7 +75,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 11,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -117,7 +121,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 1,
     "Total": 13,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -132,7 +137,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 2,
     "Total": 8,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -147,7 +153,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 1,
     "Total": 6,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -162,7 +169,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 1,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -177,7 +185,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 9,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -192,7 +201,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 2,
     "Total": 11,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -207,7 +217,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 0,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -222,7 +233,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 3,
     "Total": 8,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -267,7 +279,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 0,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -297,7 +310,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 0,
     "Total": 11,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -357,7 +371,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 12,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -372,7 +387,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 3,
     "Total": 11,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -402,7 +418,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 13,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 3,
@@ -417,7 +434,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 1,
     "Total": 11,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -462,7 +480,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 3,
     "Total": 9,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -552,7 +571,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 9,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -582,7 +602,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 2,
     "Total": 12,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -627,7 +648,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 3,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -702,7 +724,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 11,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 3,
@@ -717,7 +740,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 1,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -747,7 +771,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 2,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -792,7 +817,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -837,7 +863,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 1,
     "Total": 9,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -852,7 +879,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 0,
     "Total": 11,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -867,7 +895,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 11,
-    "Support": 3
+    "Support": 3,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -882,7 +911,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 9,
-    "Support": 3
+    "Support": 3,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -912,7 +942,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 3,
     "Total": 6,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -927,7 +958,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 3,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 3,
@@ -957,7 +989,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 9,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1017,7 +1050,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 3,
     "Total": 7,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1047,7 +1081,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 0,
     "Total": 14,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -1122,7 +1157,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 3,
     "Total": 10,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -1152,7 +1188,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 2,
     "Total": 8,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1167,7 +1204,8 @@ var heroes = [
     "Escape": 3,
     "Carry": 2,
     "Total": 9,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -1197,7 +1235,8 @@ var heroes = [
     "Escape": 3,
     "Carry": 3,
     "Total": 11,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -1212,7 +1251,8 @@ var heroes = [
     "Escape": 2,
     "Carry": 1,
     "Total": 10,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -1242,7 +1282,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 3,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1272,7 +1313,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 12,
-    "Support": 2
+    "Support": 2,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1287,7 +1329,8 @@ var heroes = [
     "Escape": 3,
     "Carry": 1,
     "Total": 12,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -1317,7 +1360,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 2,
     "Total": 12,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -1332,7 +1376,8 @@ var heroes = [
     "Escape": 1,
     "Carry": 0,
     "Total": 12,
-    "Support": 3
+    "Support": 3,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -1362,7 +1407,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 1,
     "Total": 7,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 2,
@@ -1377,7 +1423,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 0,
     "Total": 12,
-    "Support": 1
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 1,
@@ -1392,7 +1439,8 @@ var heroes = [
     "Escape": 0,
     "Carry": 3,
     "Total": 8,
-    "Support": 0
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 2,

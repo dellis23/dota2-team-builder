@@ -1,5 +1,5 @@
 function get_stat_display(hero_slug) {
-	exclude_fields = ['Total'];
+	exclude_fields = ['Total', 'Melee'];
 
 	team = new Team()
     stats = team.get_hero_stats(hero_slug);

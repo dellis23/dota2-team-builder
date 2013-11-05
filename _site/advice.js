@@ -158,6 +158,15 @@ function Advisor(team) {
         return false;
     }
 
+    this.advice_melee = function () {
+        melee = this.team.stat_sum('Melee');
+        if (melee >= 4)
+            return new Advice('Melee', 'danger', "You have too many melee characters");
+        if (melee == 3)
+            return new Advice('Melee', 'warning', "You have a lot of melee characters (3)");
+        return false;
+    }
+
     this.display = function () {
         output = '';
         for (func in this) {
