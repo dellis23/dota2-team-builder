@@ -1,7 +1,6 @@
 function Advice(name, level, message) {
     this.name = name;
     /* Boostrap levels:
-        muted
         success
         info
         warning
@@ -27,21 +26,19 @@ function GenericAdvice(name, ranges, current, optimal) {
      */
     this.current = current;
     this.optimal = optimal;
+    // level
+    for (var i = 0; i < this.ranges.length; i++) {
+        if (this.current >= this.ranges[i].min && this.current <= this.ranges[i].max) {
+            this.level = this.ranges[i].level;
+            break;
+        }
+    }
+    // percentage
+    this.percentage = this.current / this.optimal * 100;
 
     this.display = function () {
-
-        // Calculations
-        for (var i = 0; i < this.ranges.length; i++) {
-            if (this.current >= this.ranges[i].min && this.current <= this.ranges[i].max) {
-                current_level = this.ranges[i].level;
-                break;
-            }
-        }
-        current_percentage = this.current / this.optimal * 100;
-
-        // Render Output
         return '<div class="row text-{1}"><div class="col-md-3"><strong>{0}</strong>: </div><div class="col-md-9"><div class="progress progress-striped"><div class="progress-bar progress-bar-{1}" style="width: {2}%"></div></div></div></div>'
-               .format(this.name, current_level, current_percentage);
+               .format(this.name, this.level, this.percentage);
     }
 }
 
@@ -167,15 +164,24 @@ function Advisor(team) {
         return false;
     }
 
-    this.display = function () {
-        output = '';
+    this.all = function () {
+        pieces_of_advice = [];
         for (func in this) {
             if (func.indexOf("advice_") == 0) {
                 adv = this[func]();
                 if (adv) {
-                    output += adv.display();
+                    pieces_of_advice.push(adv);
                 }
             }
+        }
+        return pieces_of_advice;
+    }
+
+    this.display = function () {
+        pieces_of_advice = this.all();
+        output = '';
+        for (var i = 0; i < pieces_of_advice.length; i++) {
+            output += pieces_of_advice[i].display();
         }
         return output;
     }
