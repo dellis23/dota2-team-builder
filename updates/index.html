@@ -8,8 +8,8 @@ title: Updates
 
 		{% for post in site.posts %}
 			<h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date|date:"%m/%d/%Y" }}</small></h3>
-			<p>{{ post.excerpt }} <em><a href="{{ post.url }}">more...</em></a></p>
+			<p>{{ post.content|strip_html|truncatewords:"50" }} <em><small><a href="{{ post.url }}">more...</em></small></a></p>
 			{% if forloop.last == false %}<hr />{% endif %}
 		{% endfor %}
 	</div>
-</div> 
+</div>

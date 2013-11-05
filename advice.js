@@ -164,6 +164,28 @@ function Advisor(team) {
         return false;
     }
 
+    this.quality = function () {
+        pieces_of_advice = this.all();
+        total = 0;
+        for (var i = 0; i < pieces_of_advice.length; i++) {
+            switch(pieces_of_advice[i].level) {
+                case 'danger':
+                    add = -2;
+                    break;
+                case 'warning':
+                    add = -1;
+                    break;
+                case 'success':
+                    add = 1;
+                    break;
+                default:
+                    add = 0;
+            }
+            total += add;
+        }
+        return total;
+    }
+
     this.all = function () {
         pieces_of_advice = [];
         for (func in this) {

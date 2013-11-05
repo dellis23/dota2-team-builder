@@ -20,6 +20,13 @@ title: Build a Team
 				<ul class="heroes" id="available_heroes"></ul>
 			</div>
 		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Suggested Heroes</h3>
+				<ul class="heroes" id="suggested_heroes"></ul>
+			</div>
+		</div>
 	</div>
 	<!-- /left column -->
 
@@ -118,6 +125,7 @@ title: Build a Team
 <script src="stats.js" type="text/javascript"></script>
 <script src="hero_selector.js" type="text/javascript"></script>
 <script src="hero_stats.js" type="text/javascript"></script>
+<script src="suggestions.js" type="text/javascript"></script>
 <script type="text/javascript">
 $(document).on('heroes_changed', function () {
 
@@ -126,6 +134,7 @@ $(document).on('heroes_changed', function () {
 	team = new Team(selected);
 	advice = new Advisor(team);
 	$("#advice").html(advice.display());
+
 });
 </script>
 <!-- ... filtering -->

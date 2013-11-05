@@ -16,7 +16,7 @@ for (var i = 0; i < heroes.length; i++) {
 }
 
 // ... select heroes
-$(document).on("click", "#available_heroes .hero", function() {
+$(document).on("click", "#available_heroes .hero, #suggested_heroes .hero", function() {
   // ... ... no more than 5 max
   if (get_selected_heroes().length >= 5) { return; }
 

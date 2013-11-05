@@ -20,6 +20,7 @@ function max(list) {
 	return prev;
 }
 
+
 function Team(hero_list) {
 	this.heroes = hero_list;
 
