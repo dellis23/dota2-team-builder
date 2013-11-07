@@ -29,8 +29,8 @@ function Suggestions(hero_list) {
 
 $(document).on('heroes_changed', function () {
 
-	// Get suggestions
-	selected = get_selected_heroes();
+    // Get suggestions
+    selected = get_selected_heroes();
     suggestions = new Suggestions(selected);
     suggestions = suggestions.all();
 

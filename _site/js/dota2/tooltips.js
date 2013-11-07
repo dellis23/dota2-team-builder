@@ -1,7 +1,7 @@
 function get_stat_display(hero_slug) {
-	exclude_fields = ['Total', 'Melee'];
+    exclude_fields = ['Total', 'Melee'];
 
-	team = new Team()
+    team = new Team()
     stats = team.get_hero_stats(hero_slug);
 
     // ... hero image & name
@@ -27,19 +27,21 @@ function get_stat_display(hero_slug) {
 }
 
 
-$(function () {
-});
+function regenerate_tooltips() {
+    $('#available_heroes .hero').each(function () {
+        hero_slug = $(this).attr('data-slug');
+        $(this).attr('title', get_stat_display(hero_slug));
+    });
+    $('#available_heroes .hero').tooltipster({
+        position: 'bottom-right',
+        fixedWidth: 184,
+        maxWidth: 184,
+        //animation: 'grow',
+        delay: 0
+    });
+}
 
 
-$(document).on("mouseenter mouseleave", "#available_heroes .hero", function(event) {
-
-  /*if (event.type == 'mouseenter') {
-    html = get_stat_display($(this).attr('data-slug'));
-    $("#hero_stats").html(html);
-  }
-
-  if (event.type == 'mouseleave') {
-    $("#hero_stats").html('');
-  }*/
-
+$(document).ready(function() {
+    regenerate_tooltips();
 });

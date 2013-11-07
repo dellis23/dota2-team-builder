@@ -208,3 +208,14 @@ function Advisor(team) {
         return output;
     }
 }
+
+
+$(document).on('heroes_changed', function () {
+
+	// Get advice
+	selected = get_selected_heroes();
+	team = new Team(selected);
+	advice = new Advisor(team);
+	$("#advice").html(advice.display());
+
+});
