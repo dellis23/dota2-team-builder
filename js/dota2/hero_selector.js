@@ -2,16 +2,23 @@
 // Hero Selector
 //
 
-// ... show images
-for (var i = 0; i < heroes.length; i++) {
-  url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(heroes[i].slug);
+
+function get_hero_as_li(hero) {
+  url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(hero.slug);
   hero_li = $("<li class='hero'><img src='" + url + "' /></li>");
-  for (field in heroes[i]) {
-    hero_li.attr('data-' + field, heroes[i][field]);  // e.g. marks the hero's Carry rating as a "3"
-    if (heroes[i][field] > 0) {
+  for (field in hero) {
+    hero_li.attr('data-' + field, hero[field]);  // e.g. marks the hero's Carry rating as a "3"
+    if (hero[field] > 0) {
       hero_li.addClass(field);  // e.g. marks the hero as a "Carry".  For filtering.
     }
   }
+  return hero_li;
+}
+
+
+// ... show images
+for (var i = 0; i < heroes.length; i++) {
+  var hero_li = get_hero_as_li(heroes[i]);
   $("#available_heroes").append(hero_li);
 }
 

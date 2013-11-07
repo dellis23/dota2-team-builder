@@ -3,6 +3,7 @@ function Suggestion(hero, advice) {
     this.advice = advice;
 }
 
+
 function Suggestions(hero_list) {
     this.hero_list = hero_list;
 
@@ -37,9 +38,8 @@ $(document).on('heroes_changed', function () {
     // Show on page
     $('#suggested_heroes').html('');
     for (var i = 0; i < suggestions.length; i++) {
-        dom_hero = $('#available_heroes li.hero[data-slug={0}]'.format(
-            suggestions[i].hero.slug))
-        $('#suggested_heroes').append(dom_hero.clone(true));
+	var hero_li = get_hero_as_li(suggestions[i].hero);  // /js/dota2/hero_selector.js
+        $('#suggested_heroes').append(hero_li);
     }
 
 });
