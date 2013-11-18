@@ -1,0 +1,80 @@
+<script src="Chart.js"></script>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>
+	
+	/* TODO:
+	
+		* Graph and select multiple heros (alternating colors and using
+		  legend)
+		* Graph line of average winrate for that char (color differences
+		  above and below?)
+		* Show as minutes
+	*/
+	
+	
+	function range(start, step, count) {
+        return Array.apply(0, Array(count))
+                    .map(function (element, index) { 
+                             return index * step + start;  
+                         });
+    }
+	
+	function get_y_for_x(coefficients, x) {
+		total = 0;
+		for (var i = 0; i < coefficients.length; i++) {
+			total += coefficients[i] * Math.pow(
+				x, coefficients.length - i - 1);
+		}
+		return total;
+	}
+	
+	var pudge = [-2.037082, 65.113653, -677.722877, 3735.152351, 
+				 -12911.1734, 30340.848757, -50598.834994, 
+				 61261.560412, -54382.919187, 35403.301332, 
+				 -16756.366624, 5659.354704, -1319.937014, 200.709981, 
+				 -17.603719, 1.075203]
+	
+	var intervals = range(0.25, 0.01, 100);
+	
+	var data = {
+		// Labels
+		labels : intervals.map(function (x) { 
+			if (x % 0.25 == 0) { return String(x) }
+			else {
+				return "";
+			}}),
+		
+		// Data
+		datasets : [/*
+			{
+				fillColor : "rgba(220,220,220,0.5)",
+				strokeColor : "rgba(220,220,220,1)",
+				pointColor : "rgba(220,220,220,1)",
+				pointStrokeColor : "#fff",
+				data : intervals.map(function (x) { 
+					return get_y_for_x(pudge, x); })
+			},*/
+			{
+				fillColor : "rgba(151,187,205,0.5)",
+				strokeColor : "rgba(151,187,205,1)",
+				pointColor : "rgba(151,187,205,1)",
+				pointStrokeColor : "#fff",
+				data : intervals.map(function (x) { 
+					return get_y_for_x(pudge, x); })
+			}
+		]
+	}
+	
+	var ctx = document.getElementById("myChart").getContext("2d");
+	new Chart(ctx).Line(data, {
+		pointDot : false,
+		
+		// Scale
+		scaleOverride : true,
+		scaleSteps : 20,
+		scaleStepWidth : 0.01,
+		scaleStartValue : 0.4,
+	});
+</script>

@@ -57,11 +57,7 @@
   
   
       <url>
-        <loc>/about/index.html</loc>
-       </url>
-  
-      <url>
-        <loc>/index.html</loc>
+        <loc>/updates/index.html</loc>
        </url>
   
       <url>
@@ -69,7 +65,11 @@
        </url>
   
       <url>
-        <loc>/updates/index.html</loc>
+        <loc>/about/index.html</loc>
+       </url>
+  
+      <url>
+        <loc>/index.html</loc>
        </url>
   
 </urlset>
