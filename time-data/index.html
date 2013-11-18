@@ -12,9 +12,6 @@
 <script>
 
 	/* TODO:
-
-		* Graph and select multiple heros (alternating colors and using
-		  legend)
 		* Graph line of average winrate for that char (color differences
 		  above and below?)
 		* Show as minutes
@@ -54,7 +51,7 @@
 			datasets : []
 		}
 		colors = [
-			["rgba(220,220,220,0.5)", "rgba(220,220,220,1)"],
+			["rgba(80,143,91,0.5)", "rgba(80,143,91,1)"],
 			["rgba(151,187,205,0.5)", "rgba(151,187,205,1)"],
 			["rgba(34,53,73,0.5)", "rgba(34,53,73,1)"],
 			["rgba(223,172,107,0.5)", "rgba(223,172,107,1)"]
@@ -76,6 +73,7 @@
 		var ctx = document.getElementById("myChart").getContext("2d");
 		new Chart(ctx).Line(data, {
 			pointDot : false,
+			datasetFill : false,
 
 			// Scale
 			scaleOverride : true,
