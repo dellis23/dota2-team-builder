@@ -406,6 +406,22 @@ var heroes = [
     "Support": 1
   },
   {
+    "Initiator": 2,
+    "Name": "Earth Spirit",
+    "Disabler": 1,
+    "Pusher": 0,
+    "Durable": 2,
+    "Jungler": 0,
+    "Nuker": 1,
+    "slug": "earthshaker",
+    "LaneSupport": 1,
+    "Escape": 3,
+    "Carry": 0,
+    "Total": 13,
+    "Support": 2,
+    "Melee": 1
+  },
+  {
     "Initiator": 3,
     "Name": "Earthshaker",
     "Disabler": 3,
@@ -435,6 +451,22 @@ var heroes = [
     "Carry": 1,
     "Total": 11,
     "Support": 2,
+    "Melee": 1
+  },
+  {
+    "Initiator": 2,
+    "Name": "Ember Spirit",
+    "Disabler": 1,
+    "Pusher": 1,
+    "Durable": 2,
+    "Jungler": 0,
+    "Nuker": 2,
+    "slug": "ember_spirit",
+    "LaneSupport": 0,
+    "Escape": 2,
+    "Carry": 2,
+    "Total": 11,
+    "Support": 0,
     "Melee": 1
   },
   {
@@ -680,6 +712,22 @@ var heroes = [
     "Carry": 0,
     "Total": 10,
     "Support": 2
+  },
+  {
+    "Initiator": 3,
+    "Name": "Legion Commander",
+    "Disabler": 1,
+    "Pusher": 0,
+    "Durable": 2,
+    "Jungler": 3,
+    "Nuker": 1,
+    "slug": "legion_commander",
+    "LaneSupport": 0,
+    "Escape": 1,
+    "Carry": 2,
+    "Total": 9,
+    "Support": 1,
+    "Melee": 1
   },
   {
     "Initiator": 0,
@@ -960,6 +1008,21 @@ var heroes = [
     "Total": 10,
     "Support": 0,
     "Melee": 1
+  },
+  {
+    "Initiator": 1,
+    "Name": "Phoenix",
+    "Disabler": 1,
+    "Pusher": 0,
+    "Durable": 2,
+    "Jungler": 0,
+    "Nuker": 2,
+    "slug": "phoenix",
+    "LaneSupport": 2,
+    "Escape": 3,
+    "Carry": 0,
+    "Total": 14,
+    "Support": 2
   },
   {
     "Initiator": 3,
@@ -1299,6 +1362,22 @@ var heroes = [
     "Carry": 2,
     "Total": 7,
     "Support": 0
+  },
+  {
+    "Initiator": 0,
+    "Name": "Terrorblade",
+    "Disabler": 1,
+    "Pusher": 1,
+    "Durable": 1,
+    "Jungler": 0,
+    "Nuker": 2,
+    "slug": "terrorblade",
+    "LaneSupport": 0,
+    "Escape": 0,
+    "Carry": 3,
+    "Total": 8,
+    "Support": 0,
+    "Melee": 1
   },
   {
     "Initiator": 3,
