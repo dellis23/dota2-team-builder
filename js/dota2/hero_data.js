@@ -413,7 +413,7 @@ var heroes = [
     "Durable": 2,
     "Jungler": 0,
     "Nuker": 1,
-    "slug": "earthshaker",
+    "slug": "earth_spirit",
     "LaneSupport": 1,
     "Escape": 3,
     "Carry": 0,
