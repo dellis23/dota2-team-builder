@@ -35,13 +35,70 @@ $(document).on("click", "#available_heroes .hero, #suggested_heroes .hero", func
   hero = $(this).clone(true);
   hero.off('click');
   $("#selected_heroes").append(hero);
+
   $(document).trigger('heroes_changed');
+
+  // Update the chart
+  var selectedHeroes = get_selected_heroes();
+  // Clean up names of heroes
+  selectedHeroes = cleanUpSelected(selectedHeroes);
+
+  var coefficients = [];
+  for (var i = 0; i < selectedHeroes.length; i++) {
+    if (selectedHeroes[i] != "Legion Commander" && selectedHeroes[i] != "Phoenix" && selectedHeroes[i] != "Terrorblade") // temporary fix until there are coefficients for those heroes
+    {
+      coefficients.push(hero_coefficients[selectedHeroes[i]]);
+    }
+  }
+  make_chart(coefficients);
+
+  // Update the legend
+  $("#legend").html('');
+  for (var i = 0; i < selectedHeroes.length; i++) 
+  {
+    if (selectedHeroes[i] != "Legion Commander" && selectedHeroes[i] != "Phoenix" && selectedHeroes[i] != "Terrorblade") // temporary fix until there are coefficients for those heroes
+    {
+      $("#legend").append("<li class='bullet' style='color: "
+                + COLORS[i][1] + "'>&#9632;</li><li class='text'>"
+                + selectedHeroes[i] + "</li>");
+    }
+  }
+
+  
 });
 
 // ... remove heroes
 $(document).on("click", '#selected_heroes .hero', function() {
   $(this).remove();
   $(document).trigger('heroes_changed');
+  
+  // Update the chart
+  var selectedHeroes = get_selected_heroes();
+  // Clean up names of heroes
+  selectedHeroes = cleanUpSelected(selectedHeroes);
+
+  var coefficients = [];
+  for (var i = 0; i < selectedHeroes.length; i++) {
+    if (selectedHeroes[i] != "Legion Commander" && selectedHeroes[i] != "Phoenix" && selectedHeroes[i] != "Terrorblade") // temporary fix until there are coefficients for those heroes
+    {
+      coefficients.push(hero_coefficients[selectedHeroes[i]]);
+    }
+  }
+  make_chart(coefficients);
+
+  // Update the legend
+  $("#legend").html('');
+  for (var i = 0; i < selectedHeroes.length; i++) 
+  {
+    if (selectedHeroes[i] != "Legion Commander" && selectedHeroes[i] != "Phoenix" && selectedHeroes[i] != "Terrorblade") // temporary fix until there are coefficients for those heroes
+    {
+      $("#legend").append("<li class='bullet' style='color: "
+                + COLORS[i][1] + "'>&#9632;</li><li class='text'>"
+                + selectedHeroes[i] + "</li>");
+    }
+  }
+
+  
 });
 
 // ... Main Interface
@@ -52,4 +109,93 @@ function get_selected_heroes() {
     names.push($(selected_heroes[i]).attr('data-slug'));
   }
   return names;
+}
+
+
+function cleanUpSelected(select)
+{
+  var fixedSelected = select;
+  for (var i = 0; i < fixedSelected.length; i++) 
+  {
+    /*
+    ["antimage"] 
+    ["centaur"] 
+    ["rattletrap"] 
+    ["doom_bringer"] 
+    ["wisp"] 
+    ["keeper_of_the_light"] 
+    ["life_stealer"] 
+    ["legion_commander"] 
+    ["lycan"] 
+    ["magnataur"] 
+    ["furion"] 
+    ["obsidian_destroyer"] 
+    ["phoenix"] 
+    ["queenofpain"] 
+    ["nevermore"] 
+    ["terrorblade"] 
+    ["shredder"] 
+    ["treant"] 
+    ["vengefulspirit"]
+    ["zuus"] 
+    */
+    switch(fixedSelected[i])
+    {
+    case "antimage":
+      fixedSelected[i] = "Anti-Mage";
+      break;
+    case "centaur":
+      fixedSelected[i] = "Centaur Warrunner";
+      break;
+    case "rattletrap":
+      fixedSelected[i] = "Clockwerk";
+      break;
+    case "doom_bringer":
+      fixedSelected[i] = "Doom";
+      break;
+    case "wisp":
+      fixedSelected[i] = "Io";
+      break;
+    case "keeper_of_the_light":
+      fixedSelected[i] = "Keeper of the Light";
+      break;
+    case "life_stealer":
+      fixedSelected[i] = "Lifestealer";
+      break;
+    case "lycan":
+      fixedSelected[i] = "Lycanthrope";
+      break;
+    case "magnataur":
+      fixedSelected[i] = "Magnus";
+      break;
+    case "furion":
+      fixedSelected[i] = "Nature's Prophet";
+      break;
+    case "obsidian_destroyer":
+      fixedSelected[i] = "Outworld Devourer";
+      break;
+    case "queenofpain":
+      fixedSelected[i] = "Queen of Pain";
+      break;
+    case "nevermore":
+      fixedSelected[i] = "Shadow Fiend";
+      break;
+    case "shredder":
+      fixedSelected[i] = "Timbersaw";
+      break;
+    case "treant":
+      fixedSelected[i] = "Treant Protector";
+      break;
+    case "vengefulspirit":
+      fixedSelected[i] = "Vengeful Spirit";
+      break;
+    case "zuus":
+      fixedSelected[i] = "Zeus";
+      break;
+    default:
+      fixedSelected[i] = fixedSelected[i].replace(/_/g, " ").replace(/\b./g, function(m){ return m.toUpperCase(); });
+      break;
+    }
+  }
+  return fixedSelected;
 }

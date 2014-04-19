@@ -5,7 +5,7 @@ title: Build a Balanced DOTA2 Team Composition
 <div class="row">
 
 	<!-- Left column -->
-	<div class="col-md-8">
+	<div class="col-md-6">
 		<div class="row" style="min-height: 134px">
 			<div class="col-md-12">
 				<h2>Selected Heroes</h2>
@@ -25,18 +25,6 @@ title: Build a Balanced DOTA2 Team Composition
 			<div class="col-md-12">
 				<h3>Suggested Heroes</h3>
 				<ul class="heroes" id="suggested_heroes"></ul>
-			</div>
-		</div>
-	</div>
-	<!-- /left column -->
-
-	<!-- Right column -->
-	<div class="col-md-4">
-
-		<div class="row" style="min-height: 246px;">
-			<div class="col-md-12">
-				<h3>Advice</h2>
-				<div id="advice"></div>
 			</div>
 		</div>
 
@@ -100,6 +88,29 @@ title: Build a Balanced DOTA2 Team Composition
 		</div>
 
 	</div>
+	<!-- /left column -->
+
+	<!-- Right column -->
+	<div class="col-md-6">
+
+		<div class="row" style="min-height: 246px;">
+			<div class="col-md-12">
+				<h2>Advice</h2>
+				<div id="advice"></div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Win Rate vs. Game Duration</h2>
+				<canvas id="myChart" width="512" height="384"></canvas>
+				<hr />
+				<ul id="legend"></ul>
+				<hr style="clear: both;" />
+			</div>
+		</div>
+
+	</div>
 	<!-- /right column -->
 
 </div>
@@ -126,6 +137,97 @@ title: Build a Balanced DOTA2 Team Composition
 <script src="/js/dota2/hero_selector.js" type="text/javascript"></script>
 <script src="/js/dota2/tooltips.js" type="text/javascript"></script>
 <script src="/js/dota2/suggestions.js" type="text/javascript"></script>
+<!-- Chart -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/js/dota2/hero_coefficients.js"></script>
+<script src="/js/dota2/Chart.js"></script>
+<script>
+
+	/* TODO:
+		* Graph line of average winrate for that char (color differences
+		  above and below?)
+	*/
+
+	var COLORS = [
+		["rgba(80,143,91,0.5)", "rgba(80,143,91,1)"],
+		["rgba(109,8,57,0.5)", "rgba(109,8,57,1)"],
+		["rgba(151,187,205,0.5)", "rgba(151,187,205,1)"],
+		["rgba(34,53,73,0.5)", "rgba(34,53,73,1)"],
+		["rgba(223,172,107,0.5)", "rgba(223,172,107,1)"],
+		["rgba(158,123,229,0.5)", "rgba(158,123,229,1)"]
+	];
+
+	function range(start, step, count) {
+        return Array.apply(0, Array(count))
+                    .map(function (element, index) {
+                             return index * step + start;
+                         });
+    }
+
+	function get_time_display(hours) {
+		var minutes = hours - Math.floor(hours);
+		var hours_display = ("0" + String(Math.floor(hours))).slice(-2);
+		var minutes_display = ("0" + String(minutes * 60)).slice(-2);
+		return hours_display + ":" + minutes_display;
+	}
+
+	function get_y_for_x(coefficients, x) {
+		total = 0;
+		for (var i = 0; i < coefficients.length; i++) {
+			total += coefficients[i] * Math.pow(
+				x, coefficients.length - i - 1);
+		}
+		return total;
+	}
+
+	var intervals = range(0.25, 0.01, 101);
+
+	var chart;
+
+	function make_chart(heroes_coefficients) {
+
+		// Setup basic display settings
+		var data = {
+			// Labels
+			labels : intervals.map(function (x) {
+				if (x % 0.25 == 0) { return get_time_display(x); }
+				else {
+					return "";
+				}}),
+
+			// Data
+			datasets : []
+		}
+
+		// Load hero data
+		for (var i = 0; i < heroes_coefficients.length; i++) {
+			data.datasets.push({
+				fillColor : COLORS[i][0],
+				strokeColor : COLORS[i][1],
+				pointColor : COLORS[i][2],
+				pointStrokeColor : "#fff",
+				data : intervals.map(function (x) {
+					return get_y_for_x(heroes_coefficients[i], x); })
+			});
+		}
+
+		// Draw the chart
+		var ctx = document.getElementById("myChart").getContext("2d");
+		chart = new Chart(ctx)
+		chart.Line(data, {
+			pointDot : false,
+			datasetFill : false,
+
+			// Scale
+			scaleOverride : true,
+			scaleSteps : 11,
+			scaleStepWidth : 0.05,
+			scaleStartValue : 0.25,
+		});
+
+	}
+</script>
+
 <!-- ... filtering -->
 <!-- ... ... by name -->
 <script src="/js/jquery.fastLiveFilter.js"></script>

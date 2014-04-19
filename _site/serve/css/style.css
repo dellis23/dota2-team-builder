@@ -1,0 +1,45 @@
+ul.heroes {
+	list-style-type: none;
+}
+	ul.heroes li.hero {
+		float: left;
+		cursor: pointer;
+	}
+		ul#available_heroes li.hero img {
+			width: 54px;
+		}
+		ul#selected_heroes li.hero {
+			width: 127px;
+		}
+
+#advice .progress {
+	margin-bottom: 7px;
+}
+
+#legend li {
+	float: left;
+	list-style-type: none;
+	min-height: 30px;
+}
+
+#legend li:nth-child(7) {
+	clear: left;
+}
+
+	#legend li.bullet {
+		/*list-style-type: square;*/
+		font-size: 48px;
+		line-height: 12px;
+		margin-right: 5px;
+	}
+
+	#legend li.text {
+		font-size: small;
+		margin-right: 15px;
+		width: 115px;
+	}
+
+
+li.active .badge {
+	background-color: #3399f3;
+}
