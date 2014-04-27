@@ -8,8 +8,11 @@ ul.heroes {
 		ul#available_heroes li.hero img {
 			width: 54px;
 		}
-		ul#selected_heroes li.hero {
-			width: 127px;
+		ul#selected_heroes li.hero, ul#suggested_heroes li.hero {
+			width: 80px;
+		}
+		ul#selected_heroes li.hero img, ul#suggested_heroes li.hero img {
+			width: 80px;
 		}
 
 #advice .progress {
