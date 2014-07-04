@@ -12,6 +12,9 @@ function get_hero_as_li(hero) {
       hero_li.addClass(field);  // e.g. marks the hero as a "Carry".  For filtering.
     }
   }
+  if(typeof hero.Search == 'undefined') {
+    hero_li.attr('data-Search', hero['Name']);
+  }
   return hero_li;
 }
 
