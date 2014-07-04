@@ -2,6 +2,16 @@
 // Hero Selector
 //
 
+$(document).ready(function(){
+    var params = get_url_params();
+    var team = new Team();
+    var heroes = params.heroes.split(',');
+    if(heroes.length > 0) {
+        for(i in heroes) {
+            $("#available_heroes .hero[data-slug='"+heroes[i]+"']").trigger('click');
+        }
+    }
+});
 
 function get_hero_as_li(hero) {
   url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(hero.slug);
@@ -42,6 +52,10 @@ $(document).on("click", "#available_heroes .hero, #suggested_heroes .hero", func
 
   // Update the chart
   var selectedHeroes = get_selected_heroes();
+  
+  // Update the hash
+  location.hash = "heroes="+selectedHeroes.join(',');
+  
   // Clean up names of heroes
   selectedHeroes = cleanUpSelected(selectedHeroes);
 
