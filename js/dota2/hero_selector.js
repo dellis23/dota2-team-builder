@@ -32,9 +32,8 @@ $(document).on("click", "#available_heroes .hero, #suggested_heroes .hero", func
   if (get_selected_heroes().indexOf(hero_name) != -1) { return; }
 
   //... ... select the character
-  hero = $(this).clone(true);
-  hero.off('click');
-  $("#selected_heroes").append(hero);
+  $("#selected_heroes").append(get_hero_as_li(new Team().get_hero_stats(hero_name)));
+  $("#selected_heroes .hero:last").create_tooltip();
 
   $(document).trigger('heroes_changed');
 
