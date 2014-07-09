@@ -38,8 +38,9 @@ $(document).on('heroes_changed', function () {
     // Show on page
     $('#suggested_heroes').html('');
     for (var i = 0; i < suggestions.length; i++) {
-	var hero_li = get_hero_as_li(suggestions[i].hero);  // /js/dota2/hero_selector.js
+        var hero_li = get_hero_as_li(suggestions[i].hero);  // /js/dota2/hero_selector.js
         $('#suggested_heroes').append(hero_li);
+        $('#suggested_heroes .hero:last').create_tooltip();
     }
 
 });

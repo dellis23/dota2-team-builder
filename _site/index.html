@@ -166,6 +166,24 @@ $("ul.nav li").each(function(index) {
 	  });
 	  };
 	}
+	
+    function get_url_params() {
+        var params = {
+            'heroes': ''
+        };
+        
+        var hash = location.hash.substr(1).split(';');
+        if(hash.length > 0) {
+            for(pair in hash)
+            {
+                pair = hash[pair].split('=');
+                if(pair.length != 2 || !params.hasOwnProperty(pair[0])) { continue; }
+                params[pair[0]] = pair[1];
+            }
+        }
+        
+        return params;
+    }
 </script>
 <!-- ... dota2 -->
 <script src="/js/dota2/advice.js" type="text/javascript"></script>

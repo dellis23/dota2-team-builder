@@ -33,7 +33,7 @@ jQuery.fn.fastLiveFilter = function(list, options) {
 		var numShown = 0;
 		for (var i = 0; i < len; i++) {
 			li = lis[i];
-			if ($(li).attr('data-Name').toLowerCase().indexOf(filter) >= 0) {
+			if ($(li).attr('data-Search').toLowerCase().indexOf(filter) >= 0) {
 				if (li.style.display == "none") {
 					//li.style.display = oldDisplay;
 					li.style.display = "block";

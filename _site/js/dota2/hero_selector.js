@@ -2,6 +2,16 @@
 // Hero Selector
 //
 
+$(document).ready(function(){
+    var params = get_url_params();
+    var team = new Team();
+    var heroes = params.heroes.split(',');
+    if(heroes.length > 0) {
+        for(i in heroes) {
+            $("#available_heroes .hero[data-slug='"+heroes[i]+"']").trigger('click');
+        }
+    }
+});
 
 function get_hero_as_li(hero) {
   url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(hero.slug);
@@ -11,6 +21,9 @@ function get_hero_as_li(hero) {
     if (hero[field] > 0) {
       hero_li.addClass(field);  // e.g. marks the hero as a "Carry".  For filtering.
     }
+  }
+  if(typeof hero.Search == 'undefined') {
+    hero_li.attr('data-Search', hero['Name']);
   }
   return hero_li;
 }
@@ -32,14 +45,17 @@ $(document).on("click", "#available_heroes .hero, #suggested_heroes .hero", func
   if (get_selected_heroes().indexOf(hero_name) != -1) { return; }
 
   //... ... select the character
-  hero = $(this).clone(true);
-  hero.off('click');
-  $("#selected_heroes").append(hero);
+  $("#selected_heroes").append(get_hero_as_li(new Team().get_hero_stats(hero_name)));
+  $("#selected_heroes .hero:last").create_tooltip();
 
   $(document).trigger('heroes_changed');
 
   // Update the chart
   var selectedHeroes = get_selected_heroes();
+  
+  // Update the hash
+  location.hash = "heroes="+selectedHeroes.join(',');
+  
   // Clean up names of heroes
   selectedHeroes = cleanUpSelected(selectedHeroes);
 

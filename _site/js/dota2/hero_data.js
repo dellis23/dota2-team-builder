@@ -1210,6 +1210,7 @@ var heroes = [
   {
     "Initiator": 0,
     "Name": "Skeleton King",
+    "Search": "Skeleton King Wraith King",
     "Disabler": 2,
     "Pusher": 1,
     "Durable": 3,
