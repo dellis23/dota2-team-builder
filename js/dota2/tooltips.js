@@ -1,3 +1,15 @@
+$.fn.create_tooltip = function() {
+    $(this)
+        .attr('title', get_stat_display( $(this).attr('data-slug')) )
+        .tooltipster({
+            position: 'bottom-right',
+            fixedWidth: 184,
+            maxWidth: 184,
+            delay: 0
+        }
+    );
+};
+
 function get_stat_display(hero_slug) {
     exclude_fields = ['Total', 'Melee'];
 
@@ -30,14 +42,7 @@ function get_stat_display(hero_slug) {
 function regenerate_tooltips() {
     $('#available_heroes .hero').each(function () {
         hero_slug = $(this).attr('data-slug');
-        $(this).attr('title', get_stat_display(hero_slug));
-    });
-    $('#available_heroes .hero').tooltipster({
-        position: 'bottom-right',
-        fixedWidth: 184,
-        maxWidth: 184,
-        //animation: 'grow',
-        delay: 0
+        $(this).create_tooltip();
     });
 }
 
