@@ -288,9 +288,15 @@ title: Build a Balanced DOTA2 Team Composition
 		$('input[type="range"]').rangeslider({
 			polyfill: false,
 			onSlide: function(position, value) {
+				var name_display = (value == $(this).attr('max')) ? 'block' : 'none';
+				
 				$("#available_heroes .hero img").each(function(){
 					$(this).css('width', value);
 				});
+				
+				if($("#available_heroes .hero span").first().css('display') != name_display) {
+					$("#available_heroes .hero span").each(function(){ $(this).css('display', name_display); });
+				}
 			},
 		});
 	});

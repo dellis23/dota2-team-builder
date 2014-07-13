@@ -4,6 +4,7 @@ ul.heroes {
 	ul.heroes li.hero {
 		float: left;
 		cursor: pointer;
+		position: relative;
 	}
 		ul#available_heroes li.hero img {
 			width: 54px;
@@ -13,6 +14,17 @@ ul.heroes {
 		}
 		ul#selected_heroes li.hero img, ul#suggested_heroes li.hero img {
 			width: 80px;
+		}
+		li.hero span {
+			display: none;
+			font-size: 8pt;
+			font-weight: bold;
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			bottom: 0px;
+			text-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+			background-color:rgba(0,0,0,.4);
 		}
 
 #advice .progress {
