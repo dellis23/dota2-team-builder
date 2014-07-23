@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 function get_hero_as_li(hero) {
   url = "http://cdn.dota2.com/apps/dota2/images/heroes/{0}_hphover.png".format(hero.slug);
-  hero_li = $("<li class='hero'><img src='" + url + "' /></li>");
+  hero_li = $("<li class='hero'><img src='" + url + "' /><span>"+hero['Name']+"</span></li>");
   for (field in hero) {
     hero_li.attr('data-' + field, hero[field]);  // e.g. marks the hero's Carry rating as a "3"
     if (hero[field] > 0) {

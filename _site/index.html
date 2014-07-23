@@ -5,11 +5,11 @@
 <title> Build a Balanced DOTA2 Team Composition |  DOTA2 Team Builder v1.1.0</title>
 <link rel="stylesheet" href="/css/style.css" />
 <link rel="stylesheet" type="text/css" href="/css/tooltipster.css" />
+<link rel="stylesheet" type="text/css" href="/css/rangeslider.css" />
 <script src=
 "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type=
 "text/javascript"></script>
   <script src="/bootstrap/js/bootstrap.min.js"></script>
-
   <link href="/bootstrap/css/slate/bootstrap-slate.min.css" media="screen" rel="stylesheet">
 </head>
 <body style="padding-top: 78px;">
@@ -53,6 +53,7 @@ $("ul.nav li").each(function(index) {
 
 		<div class="row">
 			<div class="col-md-12">
+				<div class="avatar-slider"><span>Size:</span> <input type="range" min="54" max="127" step="1" value="54"></div>
 				<h2>Available Heroes</h2>
 				<ul class="heroes" id="available_heroes"></ul>
 			</div>
@@ -319,11 +320,28 @@ $("ul.nav li").each(function(index) {
 				order: $(this).attr('data-order'),
 			});
 		});
+		
+		// Add slider to control avatar size
+		$('input[type="range"]').rangeslider({
+			polyfill: false,
+			onSlide: function(position, value) {
+				var name_display = (value == $(this).attr('max')) ? 'block' : 'none';
+				
+				$("#available_heroes .hero img").each(function(){
+					$(this).css('width', value);
+				});
+				
+				if($("#available_heroes .hero span").first().css('display') != name_display) {
+					$("#available_heroes .hero span").each(function(){ $(this).css('display', name_display); });
+				}
+			},
+		});
 	});
 </script>
 
 
 <script type="text/javascript" src="/js/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="/js/rangeslider.min.js"></script>
 <script>
 </script>
 <!-- /scripts -->
