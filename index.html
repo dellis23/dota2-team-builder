@@ -16,6 +16,7 @@ title: Build a Balanced DOTA2 Team Composition
 
 		<div class="row">
 			<div class="col-md-12">
+				<div class="avatar-slider"><span>Size:</span> <input type="range" min="54" max="127" step="1" value="54"></div>
 				<h2>Available Heroes</h2>
 				<ul class="heroes" id="available_heroes"></ul>
 			</div>
@@ -282,11 +283,28 @@ title: Build a Balanced DOTA2 Team Composition
 				order: $(this).attr('data-order'),
 			});
 		});
+		
+		// Add slider to control avatar size
+		$('input[type="range"]').rangeslider({
+			polyfill: false,
+			onSlide: function(position, value) {
+				var name_display = (value == $(this).attr('max')) ? 'block' : 'none';
+				
+				$("#available_heroes .hero img").each(function(){
+					$(this).css('width', value);
+				});
+				
+				if($("#available_heroes .hero span").first().css('display') != name_display) {
+					$("#available_heroes .hero span").each(function(){ $(this).css('display', name_display); });
+				}
+			},
+		});
 	});
 </script>
 
 
 <script type="text/javascript" src="/js/jquery.tooltipster.min.js"></script>
+<script type="text/javascript" src="/js/rangeslider.min.js"></script>
 <script>
 </script>
 <!-- /scripts -->
