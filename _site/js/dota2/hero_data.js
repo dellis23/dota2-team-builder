@@ -1216,7 +1216,7 @@ var heroes = [
     "Durable": 3,
     "Jungler": 0,
     "Nuker": 1,
-    "slug": "wraith_king",
+    "slug": "skeleton_king",
     "LaneSupport": 0,
     "Escape": 0,
     "Carry": 3,
