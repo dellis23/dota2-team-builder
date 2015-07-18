@@ -300,7 +300,7 @@ var heroes = [
   {
     "Initiator": 2,
     "Name": "Dark Seer",
-    "Disabler": 0,
+    "Disabler": 1,
     "Pusher": 2,
     "Durable": 1,
     "Jungler": 2,
@@ -309,7 +309,7 @@ var heroes = [
     "LaneSupport": 1,
     "Escape": 1,
     "Carry": 0,
-    "Total": 11,
+    "Total": 12,
     "Support": 1,
     "Melee": 1
   },
@@ -516,7 +516,7 @@ var heroes = [
     "Melee": 1
   },
   {
-    "Initiator": 1,
+    "Initiator": 2,
     "Name": "Gyrocopter",
     "Disabler": 1,
     "Pusher": 3,
@@ -526,8 +526,8 @@ var heroes = [
     "slug": "gyrocopter",
     "LaneSupport": 0,
     "Escape": 0,
-    "Carry": 2,
-    "Total": 9,
+    "Carry": 3,
+    "Total": 11,
     "Support": 0
   },
   {
@@ -587,8 +587,8 @@ var heroes = [
     "LaneSupport": 2,
     "Escape": 0,
     "Carry": 0,
-    "Total": 11,
-    "Support": 3
+    "Total": 10,
+    "Support": 2
   },
   {
     "Initiator": 1,
@@ -612,13 +612,13 @@ var heroes = [
     "Disabler": 1,
     "Pusher": 3,
     "Durable": 0,
-    "Jungler": 0,
+    "Jungler": 1,
     "Nuker": 2,
     "slug": "keeper_of_the_light",
     "LaneSupport": 3,
     "Escape": 0,
     "Carry": 0,
-    "Total": 12,
+    "Total": 13,
     "Support": 3
   },
   {
@@ -646,9 +646,9 @@ var heroes = [
     "Jungler": 0,
     "Nuker": 2,
     "slug": "leshrac",
-    "LaneSupport": 2,
+    "LaneSupport": 1,
     "Escape": 0,
-    "Carry": 1,
+    "Carry": 2,
     "Total": 11,
     "Support": 2
   },
@@ -678,8 +678,8 @@ var heroes = [
     "slug": "life_stealer",
     "LaneSupport": 0,
     "Escape": 1,
-    "Carry": 3,
-    "Total": 10,
+    "Carry": 2,
+    "Total": 9,
     "Support": 0,
     "Melee": 1
   },
@@ -856,16 +856,16 @@ var heroes = [
     "Initiator": 3,
     "Name": "Naga Siren",
     "Disabler": 2,
-    "Pusher": 1,
+    "Pusher": 3,
     "Durable": 0,
     "Jungler": 0,
-    "Nuker": 1,
+    "Nuker": 0,
     "slug": "naga_siren",
-    "LaneSupport": 1,
+    "LaneSupport": 2,
     "Escape": 1,
     "Carry": 2,
-    "Total": 12,
-    "Support": 1,
+    "Total": 16,
+    "Support": 2,
     "Melee": 1
   },
   {
