@@ -962,6 +962,21 @@ var heroes = [
     "Support": 3,
     "Melee": 1
   },
+    {
+    "Initiator": 1,
+    "Name": "Oracle",
+    "Disabler": 1,
+    "Pusher": 0,
+    "Durable": 1,
+    "Jungler": 0,
+    "Nuker": 1,
+    "slug": "oracle",
+    "LaneSupport": 2,
+    "Escape": 1,
+    "Carry": 0,
+    "Total": 9,
+    "Support": 2
+  },
   {
     "Initiator": 0,
     "Name": "Outworld Devourer",
@@ -1349,6 +1364,21 @@ var heroes = [
     "Support": 1,
     "Melee": 1
   },
+    {
+    "Initiator": 1,
+    "Name": "Techies",
+    "Disabler": 1,
+    "Pusher": 2,
+    "Durable": 0,
+    "Jungler": 1,
+    "Nuker": 3,
+    "slug": "techies",
+    "LaneSupport": 0,
+    "Escape": 0,
+    "Carry": 0,
+    "Total": 8,
+    "Support": 0
+  },
   {
     "Initiator": 1,
     "Name": "Templar Assassin",
@@ -1625,6 +1655,21 @@ var heroes = [
     "Escape": 2,
     "Carry": 1,
     "Total": 12,
+    "Support": 2
+  },
+    {
+    "Initiator": 2,
+    "Name": "Winter Wyvern",
+    "Disabler": 3,
+    "Pusher": 1,
+    "Durable": 0,
+    "Jungler": 0,
+    "Nuker": 1,
+    "slug": "winter_wyvern",
+    "LaneSupport": 2,
+    "Escape": 0,
+    "Carry": 0,
+    "Total": 11,
     "Support": 2
   },
   {
